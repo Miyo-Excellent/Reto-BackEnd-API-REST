@@ -1,0 +1,4 @@
+CREATE TABLE Themes (
+  theme_id INT PRIMARY KEY AUTO_INCREMENT,
+  theme_name VARCHAR(255) UNIQUE NOT NULL
+);
