@@ -1,8 +1,7 @@
-CREATE TABLE Jokes (
+CREATE TABLE jokes (
   joke_id INT PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(255) NOT NULL,
-  body TEXT NOT NULL,
-  author_id INT NOT NULL,
-  FOREIGN KEY (author_id) REFERENCES Users(user_id),
-  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+  user_id INT NOT NULL,
+  joke_text TEXT NOT NULL,
+  theme VARCHAR(255) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
